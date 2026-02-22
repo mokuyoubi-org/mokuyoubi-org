@@ -57,22 +57,22 @@
           <span class="en-line">🚀 Coming Soon</span>
         </p> -->
       </div>
-      <div class="app-hero-visual">
+      <!-- <div class="app-hero-visual">
         <div class="goban-preview">
-          <!-- <div class="board">
+          <div class="board">
             {#each Array(81) as _, i}
               <div class="sq"
                 class:black={[10,14,18,29,33,40,42,50].includes(i)}
                 class:white={[12,22,24,36,44,48,60,66].includes(i)}>
               </div>
             {/each}
-          </div> -->
-          <!-- <div class="board-label">
+          </div>
+          <div class="board-label">
             <span class="ja-line">星碁 プレビュー</span>
             <span class="en-line">Hoshigo Preview</span>
-          </div> -->
+          </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
