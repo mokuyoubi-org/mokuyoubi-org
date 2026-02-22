@@ -8,12 +8,16 @@
       { href: '/apps', label: 'アプリ' },
       { href: '/terms', label: '利用規約' },
       { href: '/privacy', label: 'プライバシー' },
+          { href: '/tokusho', label: '特商法' },  // ← これを追加
+
     ],
     en: [
       { href: '/', label: 'Home' },
       { href: '/apps', label: 'Apps' },
       { href: '/terms', label: 'Terms' },
       { href: '/privacy', label: 'Privacy' },
+          { href: '/tokusho', label: 'SCT Act' },  // ← これを追加
+
     ]
   };
 
