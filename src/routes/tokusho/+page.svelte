@@ -17,8 +17,8 @@
       en: { label: 'Phone Number', value: 'Will be disclosed without delay upon request' }
     },
     {
-      ja: { label: 'メールアドレス', value: 'contact@mokuyoubi.org' },
-      en: { label: 'Email Address', value: 'contact@mokuyoubi.org' }
+      ja: { label: 'メールアドレス', value: 'support@mokuyoubi.org' },
+      en: { label: 'Email Address', value: 'support@mokuyoubi.org' }
     },
     {
       ja: { label: '販売価格', value: '各サービス・アプリの購入ページに表示される価格をご確認ください（消費税込み）' },
@@ -97,7 +97,7 @@
           <span class="ja-line">上記情報の開示請求・お問い合わせは以下までご連絡ください。</span>
           <span class="en-line">For disclosure requests or inquiries regarding the above information, please contact us below.</span>
         </p>
-        <a href="mailto:support@mokuyoubi.org" class="contact-link">contact@mokuyoubi.org</a>
+        <a href="mailto:support@mokuyoubi.org" class="contact-link">support@mokuyoubi.org</a>
       </div>
     </div>
   </div>
