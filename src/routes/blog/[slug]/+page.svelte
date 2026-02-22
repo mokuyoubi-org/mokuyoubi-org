@@ -53,6 +53,14 @@
   }
   .back:hover { text-decoration: underline; }
 
+  :global(.post-body img) {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
   /* Bilingual */
   :global(.en-line) { display: none; }
   :global(.en) :global(.ja-line) { display: none; }
