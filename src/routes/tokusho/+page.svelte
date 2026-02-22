@@ -174,10 +174,15 @@
     line-height: 1.8;
   }
 
-  .info-table th span,
+  /* .info-table th span,
   .info-table td span {
     display: block;
-  }
+  } */
+
+  :global(.info-table) th :global(.ja-line),
+:global(.info-table) td :global(.ja-line) {
+  display: block;
+}
 
   .contact-box {
     padding: 2rem;
