@@ -9,7 +9,7 @@
       { href: '/terms', label: '利用規約' },
       { href: '/privacy', label: 'プライバシー' },
           { href: '/tokusho', label: '特商法' }, 
-{ href: '/blog', label: '日誌' },
+{ href: '/blog', label: '日記' },
     ],
     en: [
       { href: '/', label: 'Home' },
