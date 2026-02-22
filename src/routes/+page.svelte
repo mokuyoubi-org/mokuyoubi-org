@@ -44,7 +44,7 @@
         <span class="ja-line">アプリを見る</span>
         <span class="en-line">Explore the App</span>
       </a>
-      <a href="https://github.com/mokuyoubi" class="btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/mokuyoubi-org/hoshigo" class="btn-ghost" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
   <div class="stone-deco" aria-hidden="true">

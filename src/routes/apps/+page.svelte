@@ -52,25 +52,25 @@
             <span class="platform-chip">{p.icon} <span class="ja-line">{p.ja}</span><span class="en-line">{p.en}</span></span>
           {/each}
         </div>
-        <p class="availability">
+        <!-- <p class="availability">
           <span class="ja-line">🚀 近日公開予定</span>
           <span class="en-line">🚀 Coming Soon</span>
-        </p>
+        </p> -->
       </div>
       <div class="app-hero-visual">
         <div class="goban-preview">
-          <div class="board">
+          <!-- <div class="board">
             {#each Array(81) as _, i}
               <div class="sq"
                 class:black={[10,14,18,29,33,40,42,50].includes(i)}
                 class:white={[12,22,24,36,44,48,60,66].includes(i)}>
               </div>
             {/each}
-          </div>
-          <div class="board-label">
+          </div> -->
+          <!-- <div class="board-label">
             <span class="ja-line">星碁 プレビュー</span>
             <span class="en-line">Hoshigo Preview</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -211,12 +211,12 @@
     color: var(--ink-soft);
   }
 
-  .availability {
+  /* .availability {
     font-size: 0.85rem;
     color: var(--green-mid);
     font-weight: 500;
     letter-spacing: 0.05em;
-  }
+  } */
 
   /* Goban Preview */
   .goban-preview {
@@ -226,7 +226,7 @@
     box-shadow: 0 24px 64px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3);
   }
 
-  .board {
+  /* .board {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 2px;
@@ -234,8 +234,8 @@
     background: rgba(0,0,0,0.08);
     padding: 2px;
     border-radius: 4px;
-  }
-
+  } */
+/* 
   .sq {
     background: #dcb97a;
     border-radius: 1px;
@@ -287,7 +287,7 @@
     font-size: 0.75rem;
     color: rgba(0,0,0,0.45);
     letter-spacing: 0.1em;
-  }
+  } */
 
   /* Features */
   .features-section {
