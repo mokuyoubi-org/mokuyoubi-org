@@ -50,7 +50,6 @@
   <div class="stone-deco" aria-hidden="true">
     <div class="stone black"></div>
     <div class="stone white"></div>
-    <div class="stone black sm"></div>
   </div>
 </section>
 
@@ -248,7 +247,6 @@
 
   .stone.black { width: 80px; height: 80px; background: radial-gradient(circle at 35% 35%, #4a4a4a, #111); }
   .stone.white { width: 90px; height: 90px; background: radial-gradient(circle at 35% 35%, #fff, #d8d8d8); }
-  .stone.sm { width: 50px; height: 50px; background: radial-gradient(circle at 35% 35%, #4a4a4a, #111); }
 
   /* Features */
   .features {

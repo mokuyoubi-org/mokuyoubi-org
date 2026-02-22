@@ -9,7 +9,7 @@
       { href: '/terms', label: '利用規約' },
       { href: '/privacy', label: 'プライバシー' },
           { href: '/tokusho', label: '特商法' }, 
-{ href: '/blog', label: '日記' },
+// { href: '/blog', label: '日記' },
     ],
     en: [
       { href: '/', label: 'Home' },
@@ -17,7 +17,7 @@
       { href: '/terms', label: 'Terms' },
       { href: '/privacy', label: 'Privacy' },
           { href: '/tokusho', label: 'SCT Act' }, 
-{ href: '/blog', label: 'Dev Log' }, 
+// { href: '/blog', label: 'Dev Log' }, 
 
     ]
   };
@@ -55,7 +55,6 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="logo-mark small">
-          <!-- 木 -->
         </span>
         <span>MOKUYOUBI</span>
       </div>
@@ -139,14 +138,8 @@
     width: 32px;
     height: 32px;
     background: var(--green-mid);
-    color: white;
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-family: var(--font-serif-jp);
-    flex-shrink: 0;
   }
 
   .logo-mark.small {
