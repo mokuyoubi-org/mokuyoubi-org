@@ -1,12 +1,14 @@
 <script>
-  const info = [
+
+
+const info = [
     {
       ja: { label: '販売業者', value: 'Mokuyoubiチーム' },
       en: { label: 'Seller', value: 'Mokuyoubi Team' }
     },
     {
-      ja: { label: '代表者名', value: '公開請求があった場合、遅滞なく開示します' },
-      en: { label: 'Representative', value: 'Will be disclosed without delay upon request' }
+      ja: { label: '代表者名', value: '清水 春鷹' },
+      en: { label: 'Representative', value: 'Harutaka Shimizu' }
     },
     {
       ja: { label: '所在地', value: '公開請求があった場合、遅滞なく開示します' },
@@ -41,8 +43,8 @@
       en: { label: 'Service Delivery', value: 'Available immediately after payment is completed' }
     },
     {
-      ja: { label: '返品・キャンセルについて', value: 'デジタルコンテンツの性質上、購入後の返品・キャンセルはお受けできません。ただし、法令に基づく場合はこの限りではありません。App Store・Google Play経由のご購入については、各ストアのポリシーに従います。' },
-      en: { label: 'Returns & Cancellations', value: 'Due to the nature of digital content, we cannot accept returns or cancellations after purchase, except as required by law. Purchases made through the App Store or Google Play are subject to each store\'s policy.' }
+      ja: { label: '返品・キャンセルについて', value: '＜お客様都合による返品・キャンセル＞\nデジタルコンテンツの性質上、購入後の返品・キャンセルはお受けできません。ただし、法令に基づく場合はこの限りではありません。App Store・Google Play経由のご購入については、各ストアのポリシーに従います。\n\n＜不良・欠陥があった場合＞\nサービスに重大な不具合が確認された場合は、support@mokuyoubi.org までご連絡ください。内容を確認の上、返金等の対応を検討いたします。' },
+      en: { label: 'Returns & Cancellations', value: '<Customer-initiated returns/cancellations>\nDue to the nature of digital content, we cannot accept returns or cancellations after purchase, except as required by law. Purchases made through the App Store or Google Play are subject to each store\'s policy.\n\n<Defective or faulty services>\nIf a significant malfunction is found in the service, please contact us at support@mokuyoubi.org. We will review the situation and consider a refund or other appropriate response.' }
     },
     {
       ja: { label: 'サブスクリプションの解約', value: 'サブスクリプションは次回更新日の24時間前までにアプリ内またはストアの設定からいつでも解約できます' },
@@ -53,6 +55,9 @@
       en: { label: 'System Requirements', value: 'iOS 16 or later / Android 10 or later / Modern browsers (latest Chrome, Safari, Firefox)' }
     },
   ];
+
+
+
 </script>
 
 <article class="legal-page">
@@ -173,16 +178,6 @@
     color: var(--ink-soft);
     line-height: 1.8;
   }
-
-  /* .info-table th span,
-  .info-table td span {
-    display: block;
-  } */
-
-  /* :global(.info-table) th :global(.ja-line),
-:global(.info-table) td :global(.ja-line) {
-  display: block;
-} */
 
   .contact-box {
     padding: 2rem;

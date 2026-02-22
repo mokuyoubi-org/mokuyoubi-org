@@ -211,84 +211,6 @@
     color: var(--ink-soft);
   }
 
-  /* .availability {
-    font-size: 0.85rem;
-    color: var(--green-mid);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-  } */
-
-  /* Goban Preview */
-  .goban-preview {
-    background: #dcb97a;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3);
-  }
-
-  /* .board {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 2px;
-    aspect-ratio: 1;
-    background: rgba(0,0,0,0.08);
-    padding: 2px;
-    border-radius: 4px;
-  } */
-/* 
-  .sq {
-    background: #dcb97a;
-    border-radius: 1px;
-    position: relative;
-    aspect-ratio: 1;
-  }
-
-  .sq::before, .sq::after {
-    content: '';
-    position: absolute;
-    background: rgba(0,0,0,0.25);
-  }
-
-  .sq::before { left: 50%; top: 0; bottom: 0; width: 1px; transform: translateX(-50%); }
-  .sq::after { top: 50%; left: 0; right: 0; height: 1px; transform: translateY(-50%); }
-
-  .sq.black::before, .sq.white::before,
-  .sq.black::after, .sq.white::after { display: none; }
-
-  .sq.black::before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #555, #111);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    display: block;
-    width: auto; height: auto;
-    transform: none;
-    top: 2px; left: 2px;
-  }
-
-  .sq.white::before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fff, #ccc);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    display: block;
-    width: auto; height: auto;
-    transform: none;
-    top: 2px; left: 2px;
-  }
-
-  .board-label {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.75rem;
-    color: rgba(0,0,0,0.45);
-    letter-spacing: 0.1em;
-  } */
-
   /* Features */
   .features-section {
     padding: 8rem 2rem;
@@ -420,6 +342,5 @@
 
   @media (max-width: 800px) {
     .app-hero .container { grid-template-columns: 1fr; }
-    .goban-preview { max-width: 320px; margin: 0 auto; }
   }
 </style>
