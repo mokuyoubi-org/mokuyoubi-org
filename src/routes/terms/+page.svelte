@@ -1,6 +1,6 @@
 <script>
-  const lastUpdated = '2024年12月';
-  const lastUpdatedEn = 'December 2024';
+  const lastUpdated = '2026年2月';
+  const lastUpdatedEn = 'February 2026';
 
   const sections = [
     {

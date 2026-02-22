@@ -1,6 +1,6 @@
 <script>
-  const lastUpdated = '2024年12月';
-  const lastUpdatedEn = 'December 2024';
+  const lastUpdated = '2026年2月';
+  const lastUpdatedEn = 'February 2026';
 
   const sections = [
     {
@@ -85,7 +85,7 @@
           <span class="ja-line">プライバシーに関するご質問・ご要望は、GitHubのIssueよりお知らせください。</span>
           <span class="en-line">For privacy-related questions or requests, please reach out via GitHub Issues.</span>
         </p>
-        <a href="https://github.com/mokuyoubi" target="_blank" rel="noopener" class="contact-link">GitHub →</a>
+        <a href="https://github.com/mokuyoubi-org" target="_blank" rel="noopener" class="contact-link">GitHub →</a>
       </div>
     </div>
   </div>

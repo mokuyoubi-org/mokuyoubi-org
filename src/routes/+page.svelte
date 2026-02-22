@@ -7,12 +7,12 @@
     },
     {
       icon: '🧩',
-      ja: { title: '詰碁で学習', desc: '丁寧に作られた詰碁問題で、楽しみながら棋力アップ。初心者でもすぐに始められます。' },
+      ja: { title: '詰碁で学習', desc: '詰碁問題で、楽しみながら棋力アップ。初心者でもすぐに始められます。' },
       en: { title: 'Tsumego Puzzles', desc: 'Improve your skills with carefully crafted puzzles. Designed to be beginner-friendly and genuinely fun.' }
     },
     {
       icon: '👁️',
-      ja: { title: '観戦機能', desc: '上手な対局をリアルタイムで観戦。棋譜を眺めるだけでも、囲碁の美しさが伝わります。' },
+      ja: { title: '観戦機能', desc: '対局をリアルタイムで観戦。棋譜を眺めるだけでも、囲碁の美しさが伝わります。' },
       en: { title: 'Watch & Learn', desc: 'Observe live games and learn from stronger players. The beauty of Go unfolds in real time.' }
     }
   ];
@@ -87,7 +87,7 @@
   <div class="container about-inner">
     <div class="about-visual">
       <div class="kanji-display">木</div>
-      <div class="kanji-sub">木曜日</div>
+      <div class="kanji-sub">もくようび</div>
     </div>
     <div class="about-text">
       <div class="section-label">
@@ -98,7 +98,7 @@
         <span class="en-line">Mokuyoubi Team</span>
       </h2>
       <p>
-        <span class="ja-line">「木曜日」という名前のとおり、肩の力を抜いて、ゆっくり楽しめるものを作りたい。そんな思いで集まったチームです。囲碁の奥深さと美しさを、より多くの人に届けることが目標です。</span>
+        <span class="ja-line">「もくようび」は、可愛くてシンプルなアプリをつくります。囲碁の奥深さと美しさを、より多くの人に届けることが目標です。</span>
         <span class="en-line">Named after Thursday — a day to slow down and enjoy. We're a small independent team passionate about making Go accessible, approachable, and truly enjoyable for everyone.</span>
       </p>
     </div>

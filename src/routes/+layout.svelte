@@ -26,7 +26,9 @@
   <header>
     <nav>
       <a href="/" class="logo">
-        <span class="logo-mark">木</span>
+        <span class="logo-mark">
+          <!-- 木 -->
+        </span>
         <span class="logo-text">MOKUYOUBI</span>
       </a>
       <div class="nav-links">
@@ -47,13 +49,13 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark small">木</span>
+        <span class="logo-mark small">
+          <!-- 木 -->
+        </span>
         <span>MOKUYOUBI</span>
       </div>
       <p class="footer-copy">
-        {lang === 'ja' 
-          ? '© 2024 Mokuyoubi Team. All rights reserved.' 
-          : '© 2024 Mokuyoubi Team. All rights reserved.'}
+        '© 2026 Mokuyoubi. All rights reserved.'
       </p>
     </div>
   </footer>

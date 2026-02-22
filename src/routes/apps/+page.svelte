@@ -107,7 +107,7 @@
   <section class="philosophy">
     <div class="container">
       <blockquote>
-        <span class="ja-line">囲碁は難しくない。<br>ただ、入口が狭かっただけ。</span>
+        <span class="ja-line">初心者向けの可愛くてシンプルな囲碁アプリを。</span>
         <span class="en-line">Go isn't hard.<br>The door was just too narrow.</span>
       </blockquote>
       <p class="philosophy-body">
@@ -128,7 +128,7 @@
         <span class="ja-line">GitHubで星をつけておくと、リリース時に通知が届きます。</span>
         <span class="en-line">Star us on GitHub to get notified when we launch.</span>
       </p>
-      <a href="https://github.com/mokuyoubi" class="btn-outline" target="_blank" rel="noopener">
+      <a href="https://github.com/mokuyoubi-org" class="btn-outline" target="_blank" rel="noopener">
         ⭐ GitHub
       </a>
     </div>
