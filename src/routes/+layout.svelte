@@ -55,7 +55,7 @@
         <span>MOKUYOUBI</span>
       </div>
       <p class="footer-copy">
-        '© 2026 Mokuyoubi. All rights reserved.'
+        © 2026 Mokuyoubi. All rights reserved.
       </p>
     </div>
   </footer>
