@@ -211,9 +211,9 @@
   .contact-link:hover { background: var(--green-deep); }
 
   /* Bilingual */
-  .en-line { display: none; }
-  :global(.en) .ja-line { display: none; }
-  :global(.en) .en-line { display: block; }
+:global(.en-line) { display: none; }
+:global(.en) :global(.ja-line) { display: none; }
+:global(.en) :global(.en-line) { display: block; }
 
   @media (max-width: 600px) {
     .info-table th {

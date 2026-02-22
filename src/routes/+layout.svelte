@@ -228,6 +228,11 @@
     color: rgba(255,255,255,0.5);
   }
 
+    /* Bilingual */
+:global(.en-line) { display: none; }
+:global(.en) :global(.ja-line) { display: none; }
+:global(.en) :global(.en-line) { display: block; }
+
   @media (max-width: 640px) {
     nav { padding: 0 1rem; gap: 1rem; }
     .logo-text { display: none; }

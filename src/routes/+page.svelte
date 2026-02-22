@@ -408,10 +408,9 @@
   .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
 
   /* Bilingual */
-  .en-line { display: none; }
-
-  :global(.en) .ja-line { display: none; }
-  :global(.en) .en-line { display: block; }
+:global(.en-line) { display: none; }
+:global(.en) :global(.ja-line) { display: none; }
+:global(.en) :global(.en-line) { display: block; }
 
   @media (max-width: 768px) {
     .about-inner { grid-template-columns: 1fr; gap: 3rem; }
