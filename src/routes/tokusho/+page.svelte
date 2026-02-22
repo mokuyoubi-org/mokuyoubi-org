@@ -179,10 +179,10 @@
     display: block;
   } */
 
-  :global(.info-table) th :global(.ja-line),
+  /* :global(.info-table) th :global(.ja-line),
 :global(.info-table) td :global(.ja-line) {
   display: block;
-}
+} */
 
   .contact-box {
     padding: 2rem;
