@@ -1,7 +1,7 @@
 window.currentPost = {
   title: "ブログ始めた",
   content: `続くのか続かないのかわかりませんが**とりあえずやってみる**の精神で。
-
+![image](images/ifYouFailCongrats.png)
 ### 12/29(月)
 Expo Snackでカウンタアプリを作った。
 
