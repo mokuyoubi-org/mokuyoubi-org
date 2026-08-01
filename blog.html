@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Log - MOKUYOUBI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Noto Sans JP", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="font-sans text-[#1a1a1a] bg-white min-h-screen flex flex-col antialiased"
+  >
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <section class="py-16 px-6">
+        <div class="max-w-[760px] mx-auto">
+          <!-- ページヘッダー -->
+          <header class="mb-12">
+            <p
+              class="text-[0.78rem] tracking-[0.18em] text-[#2d6a4f] uppercase font-medium mb-3"
+            >
+              Dev Log
+            </p>
+            <h1
+              class="font-display font-light text-4xl sm:text-5xl md:text-6xl text-[#1b4332] leading-none"
+            >
+              Development Log
+            </h1>
+          </header>
+
+          <!-- 記事一覧カード（JSで自動生成されるエリア） -->
+          <div id="post-list" class="flex flex-col gap-6">
+            <p class="text-[#555] text-sm">読み込み中だにゃ...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script type="module">
+      import { renderHeaderAndFooter } from "./js/header.js";
+
+      renderHeaderAndFooter();
+
+      // 記事一覧リストを読み込むにゃ
+      const script = document.createElement("script");
+      script.src = "./posts/index.js";
+
+      script.onload = async () => {
+        const slugs = window.blogSlugs || [];
+        const container = document.getElementById("post-list");
+
+        if (slugs.length === 0) {
+          container.innerHTML =
+            '<p class="text-[#555]">記事がまだないにゃ。</p>';
+          return;
+        }
+
+        // 各記事のファイルを読み込んでデータを作るにゃ
+        const loadPost = (slug) => {
+          return new Promise((resolve) => {
+            const s = document.createElement("script");
+            s.src = `./posts/${slug}.js`;
+            s.onload = () => {
+              const raw = window.currentPost || {};
+
+              // スラッグから日付を作成（2026-08-01 -> 2026.08.01）
+              const formattedDate = slug.replace(/-/g, ".");
+
+              // 本文から記号を消して最初の50文字を抽出するにゃ
+              const plainText = (raw.content || "").replace(/[*_#`\n]/g, "");
+              const summary =
+                plainText.length > 50
+                  ? plainText.slice(0, 50) + "..."
+                  : plainText;
+
+              resolve({
+                slug: slug,
+                title: raw.title || "無題",
+                date: formattedDate,
+                summary: summary,
+              });
+            };
+            document.head.appendChild(s);
+          });
+        };
+
+        // すべての記事データを取得
+        const posts = await Promise.all(slugs.map(loadPost));
+
+        // カードを表示するにゃ！
+        container.innerHTML = posts
+          .map(
+            (post) => `
+<a href="./post.html?id=${post.slug}" class="block p-8 border border-[#2d6a4f]/12 rounded-xl transition-all duration-200 hover:border-[#52b788] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(45,106,79,0.08)]">
+  <span class="text-[0.78rem] text-[#2d6a4f] tracking-widest block mb-2 font-mono">${post.date}</span>
+  <h2 class="text-lg font-semibold text-[#1b4332] mb-2">${post.title}</h2>
+  <p class="text-[0.88rem] text-[#555] leading-relaxed">${post.summary}</p>
+</a>
+`,
+          )
+          .join("");
+      };
+
+      document.head.appendChild(script);
+    </script>
+  </body>
+</html>

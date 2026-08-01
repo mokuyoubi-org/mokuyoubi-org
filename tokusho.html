@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specified Commercial Transactions Act - MOKUYOUBI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN & テーマ設定 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Noto Sans JP", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-sans text-[#1a1a1a] bg-white min-h-screen flex flex-col antialiased"
+  >
+    <!-- 共通ヘッダー -->
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <article>
+        <!-- Hero Header セクション（Privacy / Terms とサイズ・余白を完全統一！） -->
+        <header class="bg-[#f0faf2] py-16 border-b border-[#2d6a4f]/10">
+          <div class="max-w-[760px] mx-auto px-6">
+            <p
+              class="text-[0.78rem] tracking-[0.18em] text-[#2d6a4f] uppercase font-medium mb-3"
+            >
+              Specified Commercial Transactions Act
+            </p>
+            <h1
+              class="font-display font-light text-4xl sm:text-5xl md:text-6xl text-[#1b4332] leading-tight mb-4"
+            >
+              Commercial Transactions
+            </h1>
+            <p class="text-[0.88rem] text-[#555] leading-relaxed">
+              The following information is provided pursuant to Article 11 of
+              the Specified Commercial Transactions Act of Japan.
+            </p>
+          </div>
+        </header>
+
+        <!-- メインコンテンツ（Terms / Privacy と全く同じ max-w-[760px] & pt-12 pb-20 だにゃ！） -->
+        <div class="max-w-[760px] mx-auto px-6 pt-12 pb-20">
+          <div
+            id="info-list"
+            class="divide-y divide-[#2d6a4f]/[0.07] border-t border-b border-[#2d6a4f]/10"
+          ></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- 共通フッター -->
+    <div id="site-footer"></div>
+
+    <script type="module">
+      import { renderHeaderAndFooter } from "./js/header.js";
+
+      renderHeaderAndFooter();
+
+      const info = [
+        { label: "Seller", value: "Mokuyoubi Team" },
+        { label: "Representative", value: "Harutaka Shimizu" },
+        {
+          label: "Address",
+          value: "Will be disclosed without delay upon request",
+        },
+        {
+          label: "Phone Number",
+          value: "Will be disclosed without delay upon request",
+        },
+        { label: "Email Address", value: "support@mokuyoubi.org" },
+        {
+          label: "Price",
+          value:
+            "Please refer to the price displayed on each service/app purchase page (tax included)",
+        },
+        {
+          label: "Additional Fees",
+          value:
+            "Communication fees and device usage costs are the responsibility of the customer",
+        },
+        {
+          label: "Payment Methods",
+          value:
+            "Credit card (Visa, Mastercard, American Express), App Store, Google Play",
+        },
+        {
+          label: "Payment Timing",
+          value: "Payment is confirmed upon completion of the purchase process",
+        },
+        {
+          label: "Service Delivery",
+          value: "Available immediately after payment is completed",
+        },
+        {
+          label: "Returns & Cancellations",
+          value:
+            "<Customer-initiated returns/cancellations>\nDue to the nature of digital content, we cannot accept returns or cancellations after purchase, except as required by law. Purchases made through the App Store or Google Play are subject to each store's policy.\n\n<Defective or faulty services>\nIf a significant malfunction is found in the service, please contact us at support@mokuyoubi.org. We will review the situation and consider a refund or other appropriate response.",
+        },
+        {
+          label: "Subscription Cancellation",
+          value:
+            "Subscriptions can be cancelled at any time from within the app or store settings, up to 24 hours before the next renewal date",
+        },
+        {
+          label: "System Requirements",
+          value:
+            "iOS 16 or later / Android 10 or later / Modern browsers (latest Chrome, Safari, Firefox)",
+        },
+      ];
+
+      // Terms / Privacy と文字サイズ感・行間（leading-[1.9]）・区切り線の薄さを完全一致させたにゃ！
+      const list = document.getElementById("info-list");
+      list.innerHTML = info
+        .map(
+          (row) => `
+      <div class="py-8 flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
+        <div class="sm:w-52 shrink-0 text-[0.85rem] font-semibold text-[#1b4332]">
+          ${row.label}
+        </div>
+        <div class="flex-1 text-[0.92rem] text-[#555] leading-[1.9] whitespace-pre-wrap">
+          ${row.value}
+        </div>
+      </div>
+    `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

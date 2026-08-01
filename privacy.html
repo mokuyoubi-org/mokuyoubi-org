@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - MOKUYOUBI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN & テーマ設定 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Noto Sans JP", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-sans text-[#1a1a1a] bg-white min-h-screen flex flex-col antialiased"
+  >
+    <!-- 共通ヘッダー挿入位置 -->
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <article>
+        <!-- Hero Header セクション（上部の薄い緑背景エリアだにゃ！） -->
+        <header class="bg-[#f0faf2] py-16 border-b border-[#2d6a4f]/10">
+          <div class="max-w-[760px] mx-auto px-6">
+            <p
+              class="text-[0.78rem] tracking-[0.18em] text-[#2d6a4f] uppercase font-medium mb-3"
+            >
+              Privacy Policy
+            </p>
+            <h1
+              class="font-display font-light text-4xl sm:text-5xl md:text-6xl text-[#1b4332] leading-tight mb-4"
+            >
+              How We Handle Your Data
+            </h1>
+            <p class="text-[0.82rem] text-[#888]">
+              Last updated: <span id="last-updated"></span>
+            </p>
+          </div>
+        </header>
+
+        <!-- メインコンテンツ（規約セクション群） -->
+        <div class="max-w-[760px] mx-auto px-6 pt-12 pb-20">
+          <p
+            class="text-base text-[#555] leading-[1.9] pb-10 border-b border-[#2d6a4f]/10 mb-2"
+          >
+            The Mokuyoubi Team respects your privacy. This policy explains what
+            information we collect and how we use it.
+          </p>
+
+          <!-- セクション群（JSで自動生成されるエリアだにゃ！） -->
+          <div id="legal-sections"></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- 共通フッター挿入位置 -->
+    <div id="site-footer"></div>
+
+    <script type="module">
+      import { renderHeaderAndFooter } from "./js/header.js";
+
+      // 1. ヘッダー・フッターの呼び出し
+      renderHeaderAndFooter();
+
+      // 2. データの定義（元のSvelteコードそのまま！）
+      const lastUpdated = "February 2026";
+      const sections = [
+        {
+          title: "1. Information We Collect",
+          body: "We may collect the following: account information such as email address and username provided during registration; gameplay data including match history and puzzle records; access logs and device information (such as IP address and OS version) for service improvement.",
+        },
+        {
+          title: "2. How We Use Information",
+          body: "Collected information is used to: provide, maintain, and improve the Service; detect and prevent fraud; respond to inquiries; and send important service-related notices. We do not use your data for marketing purposes.",
+        },
+        {
+          title: "3. Information Sharing",
+          body: "We do not sell, share, or disclose personal information to third parties, except as required by law. We may share limited information with service providers (such as cloud hosting) strictly as necessary for operations.",
+        },
+        {
+          title: "4. Data Storage & Security",
+          body: "User information is stored on servers with appropriate security measures. However, we cannot guarantee absolute security over the internet. Please manage your password carefully and notify us immediately of any suspicious activity.",
+        },
+        {
+          title: "5. Use of Cookies",
+          body: "We may use cookies to maintain login sessions and improve service quality. You can disable cookies in your browser settings, though some features may not function properly without them.",
+        },
+        {
+          title: "6. Children's Privacy",
+          body: "The Service is not intended for children under 13. If we become aware that personal information of a child under 13 has been collected, we will promptly delete it.",
+        },
+        {
+          title: "7. Your Rights",
+          body: "You have the right to access, correct, or delete your account information. For account deletion or data export requests, please contact us via GitHub Issues.",
+        },
+        {
+          title: "8. Changes to This Policy",
+          body: "This policy may be updated at any time. Significant changes will be communicated within the Service.",
+        },
+      ];
+
+      // 3. 画面に反映
+      document.getElementById("last-updated").textContent = lastUpdated;
+
+      const container = document.getElementById("legal-sections");
+      container.innerHTML = sections
+        .map(
+          (s, index) => `
+      <section class="py-8 ${index !== sections.length - 1 ? "border-b border-[#2d6a4f]/[0.07]" : ""}">
+        <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">${s.title}</h2>
+        <p class="text-[0.92rem] text-[#555] leading-[1.9]">${s.body}</p>
+      </section>
+    `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>
