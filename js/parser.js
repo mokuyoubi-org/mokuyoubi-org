@@ -30,13 +30,13 @@ export function parseMyText(text) {
         '<strong class="font-semibold text-[#1b4332]">$1</strong>',
       )
 
-      // ★★★ 5. 【NEW】画像タグの自動変換（ここで綺麗にサイズを揃えるにゃん！） ★★★
+      // ★★★ 5. 【NEW】画像タグの自動変換（ここで綺麗にサイズを揃える） ★★★
       .replace(
         /!\[(.*?)\]\((.*?)\)/g,
         '<img src="$2" alt="$1" class="w-full max-w-[600px] max-h-[350px] object-contain rounded-lg my-4 shadow-sm" loading="lazy">',
       )
 
-      // 6. 【大本命】普通にエンターで改行する魔法だにゃ！
+      // 6. 【大本命】普通にエンターで改行する魔法
       .replace(/\n/g, "<br>")
 
       // 箇条書きを <ul> で囲む補正

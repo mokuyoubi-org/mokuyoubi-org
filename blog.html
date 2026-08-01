@@ -51,7 +51,7 @@
 
           <!-- 記事一覧カード（JSで自動生成されるエリア） -->
           <div id="post-list" class="flex flex-col gap-6">
-            <p class="text-[#555] text-sm">読み込み中だにゃ...</p>
+            <p class="text-[#555] text-sm">loading...</p>
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@
 
       renderHeaderAndFooter();
 
-      // 記事一覧リストを読み込むにゃ
+      // 記事一覧リストを読み込む
       const script = document.createElement("script");
       script.src = "./posts/index.js";
 
@@ -74,11 +74,11 @@
 
         if (slugs.length === 0) {
           container.innerHTML =
-            '<p class="text-[#555]">記事がまだないにゃ。</p>';
+            '<p class="text-[#555]">No article yet</p>';
           return;
         }
 
-        // 各記事のファイルを読み込んでデータを作るにゃ
+        // 各記事のファイルを読み込んでデータを作る
         const loadPost = (slug) => {
           return new Promise((resolve) => {
             const s = document.createElement("script");
@@ -89,7 +89,7 @@
               // スラッグから日付を作成（2026-08-01 -> 2026.08.01）
               const formattedDate = slug.replace(/-/g, ".");
 
-              // 本文から記号を消して最初の50文字を抽出するにゃ
+              // 本文から記号を消して最初の50文字を抽出する
               const plainText = (raw.content || "").replace(/[*_#`\n]/g, "");
               const summary =
                 plainText.length > 50
@@ -110,7 +110,7 @@
         // すべての記事データを取得
         const posts = await Promise.all(slugs.map(loadPost));
 
-        // カードを表示するにゃ！
+        // カードを表示する
         container.innerHTML = posts
           .map(
             (post) => `

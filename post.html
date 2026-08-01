@@ -39,7 +39,7 @@
             id="post-title"
             class="font-display text-3xl sm:text-4xl text-[#1b4332] mb-8 font-normal"
           >
-            読み込み中だにゃ...
+            loading...
           </h1>
 
           <div class="h-px bg-[#2d6a4f]/12 w-full mb-8"></div>
@@ -50,7 +50,7 @@
             class="text-[#555] leading-relaxed space-y-4 text-[0.95rem]"
           ></div>
 
-          <!-- 本文下の「戻るボタン」だにゃ！（ホバーで左にふわっと動く演出付き♪） -->
+          <!-- 本文下の「戻るボタン」（ホバーで左にふわっと動く演出付き） -->
           <a
             href="./blog.html"
             class="inline-block mt-14 text-[0.88rem] text-[#2d6a4f] hover:text-[#1b4332] transition-all duration-200 hover:-translate-x-1"
@@ -79,7 +79,7 @@
         const post = window.currentPost;
         if (!post) return;
 
-        // URLのID（ファイル名）から日付を作成するにゃ
+        // URLのID（ファイル名）から日付を作成する
         const formattedDate = postId.replace(/-/g, ".");
 
         document.title = `${post.title} - MOKUYOUBI`;
