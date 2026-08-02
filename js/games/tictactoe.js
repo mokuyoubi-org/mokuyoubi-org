@@ -1,19 +1,17 @@
 const container = document.getElementById("game-container");
 
 if (container) {
-  // 1. 勝つパターン（8つの組み合わせ）をあらかじめ決めておく
   const WINNING_COMBOS = [
     [0, 1, 2],
     [3, 4, 5],
-    [6, 7, 8], // ヨコ
+    [6, 7, 8],
     [0, 3, 6],
     [1, 4, 7],
-    [2, 5, 8], // タテ
+    [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6], // ナナメ
+    [2, 4, 6],
   ];
 
-  // 2. 画面の見た目を作る
   container.innerHTML = `
     <h3 class="font-bold text-[#1b4332] mb-4 text-lg">マルバツゲーム</h3>
     <div id="board" class="grid grid-cols-3 gap-2 w-48 mx-auto mb-4">
@@ -26,31 +24,65 @@ if (container) {
         )
         .join("")}
     </div>
-    <p id="status" class="text-sm text-[#2d6a4f] font-semibold h-6">○ の番</p>
+    <p id="status" class="text-sm text-[#2d6a4f] font-semibold h-6">あなたの番（○）</p>
     <button id="reset" class="mt-4 px-4 py-1.5 bg-[#1b4332] text-white text-xs rounded hover:opacity-90 transition-opacity">最初からやり直す</button>
   `;
 
-  let turn = "○";
+  let turn = "○"; // ○は社長（プレイヤー）、×はボット！
   let board = Array(9).fill(null);
-  let isGameOver = false; // ゲームが終わったかどうかの旗
+  let isGameOver = false;
 
   const cells = container.querySelectorAll(".cell");
   const status = container.querySelector("#status");
 
-  // 勝敗を判定する関数（ロボットの審判員）
   function checkWinner() {
     for (const combo of WINNING_COMBOS) {
       const [a, b, c] = combo;
-      // 3つのマスが空じゃなくて、全部同じマークなら勝ち！
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-        return board[a]; // '○' か '×' を返す
+        return board[a];
       }
     }
-    // 9マス全部埋まって勝者がいなければ引き分け
     if (board.every((cell) => cell !== null)) {
       return "draw";
     }
-    return null; // まだ途中
+    return null;
+  }
+
+  // ★ボットのターン（ランダムに選ぶ！）
+  function botTurn() {
+    if (isGameOver) return;
+
+    // 1. 空いているマスの番号をぜんぶ集める
+    const emptyIndices = [];
+    board.forEach((val, idx) => {
+      if (val === null) emptyIndices.push(idx);
+    });
+
+    // 空きがなかったらおしまい
+    if (emptyIndices.length === 0) return;
+
+    // 2. 空いているマスの中からランダムで1つ選ぶ！
+    const randomIndex = Math.floor(Math.random() * emptyIndices.length);
+    const chosenIndex = emptyIndices[randomIndex];
+
+    // 3. ボット（×）のマークをつける
+    board[chosenIndex] = "×";
+    cells[chosenIndex].textContent = "×";
+
+    // 4. 勝敗をチェックする
+    const winner = checkWinner();
+    if (winner) {
+      isGameOver = true;
+      if (winner === "draw") {
+        status.textContent = "引き分け🤝";
+      } else {
+        status.textContent = "ボット（×）の勝ち🎉";
+      }
+    } else {
+      // プレイヤーの番に戻す
+      turn = "○";
+      status.textContent = "あなたの番（○）";
+    }
   }
 
   // マス目がクリックされたときの動き
@@ -58,14 +90,14 @@ if (container) {
     cell.addEventListener("click", (e) => {
       const idx = e.target.dataset.index;
 
-      // すでにゲームが終わってるか、もう書かれているマスなら無視する
-      if (isGameOver || board[idx]) return;
+      // ゲーム終了か、自分の番（○）じゃない時、すでに埋まってる場所は無視する
+      if (isGameOver || board[idx] || turn !== "○") return;
 
-      // 1. 盤面データと画面を更新する
-      board[idx] = turn;
-      e.target.textContent = turn;
+      // 1. プレイヤー（○）のマークを塗る
+      board[idx] = "○";
+      e.target.textContent = "○";
 
-      // 2. 勝敗をチェックする
+      // 2. 勝敗チェック
       const winner = checkWinner();
 
       if (winner) {
@@ -73,22 +105,27 @@ if (container) {
         if (winner === "draw") {
           status.textContent = "引き分け🤝";
         } else {
-          status.textContent = `${winner} の勝ち🎉`;
+          status.textContent = "あなたの勝ち🎉";
         }
       } else {
-        // 3. まだ続いていれば交代する
-        turn = turn === "○" ? "×" : "○";
-        status.textContent = `${turn} の番`;
+        // 3. 次はボットの番
+        turn = "×";
+        status.textContent = "ボットが考えてます...";
+
+        // ちょっとだけ待ってからボットが打つと、生きているみたいで可愛い
+        setTimeout(() => {
+          botTurn();
+        }, 500);
       }
     });
   });
 
-  // リセットボタンを押したときの処理
+  // リセットボタン
   container.querySelector("#reset").addEventListener("click", () => {
     board = Array(9).fill(null);
     turn = "○";
     isGameOver = false;
-    status.textContent = "○ の番";
+    status.textContent = "あなたの番（○）";
     cells.forEach((c) => {
       c.textContent = "";
       c.classList.remove("bg-emerald-100");
