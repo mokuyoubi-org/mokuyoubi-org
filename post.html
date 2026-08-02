@@ -52,7 +52,7 @@
 
           <!-- 本文下の「戻るボタン」（ホバーで左にふわっと動く演出付き） -->
           <a
-            href="./blog.html"
+            href="./devLog.html"
             class="inline-block mt-14 text-[0.88rem] text-[#2d6a4f] hover:text-[#1b4332] transition-all duration-200 hover:-translate-x-1"
           >
             ← Back to Dev Log
@@ -85,9 +85,19 @@
         document.title = `${post.title} - MOKUYOUBI`;
         document.getElementById("post-title").textContent = post.title;
         document.getElementById("post-date").textContent = formattedDate;
+
+        // 1. 本文をレンダリングする
         document.getElementById("post-body").innerHTML = parseMyText(
           post.content,
         );
+
+        // 2. もし記事データにゲーム等のスクリプト指定（post.script）があれば動的に読み込む
+        if (post.script) {
+          const gameScript = document.createElement("script");
+          gameScript.type = "module";
+          gameScript.src = post.script;
+          document.body.appendChild(gameScript);
+        }
       };
 
       document.head.appendChild(script);

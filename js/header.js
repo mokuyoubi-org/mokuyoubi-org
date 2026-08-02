@@ -1,6 +1,3 @@
-/**
- * 元のデザインそのままの共通ヘッダー＆フッターパーツ
- */
 export function renderHeaderAndFooter() {
   // --- ヘッダー ---
   const headerHTML = `
@@ -18,7 +15,7 @@ export function renderHeaderAndFooter() {
           <a href="./terms.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Terms</a>
           <a href="./privacy.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Privacy</a>
           <a href="./tokusho.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">SCT Act</a>
-          <a href="./blog.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Dev Log</a>
+          <a href="./devLog.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Dev Log</a>
         </div>
       </nav>
     </header>
@@ -39,8 +36,8 @@ export function renderHeaderAndFooter() {
     </footer>
   `;
 
-  const headerTarget = document.getElementById('site-header');
-  const footerTarget = document.getElementById('site-footer');
+  const headerTarget = document.getElementById("site-header");
+  const footerTarget = document.getElementById("site-footer");
   if (headerTarget) headerTarget.innerHTML = headerHTML;
   if (footerTarget) footerTarget.innerHTML = footerHTML;
 }
