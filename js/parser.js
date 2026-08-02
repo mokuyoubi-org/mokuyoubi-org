@@ -1,8 +1,12 @@
+// parser.js
+
 export function parseMyText(text) {
   if (!text) return "";
 
   return (
     text
+      // 一番最初と一番最後の空白・改行を削る
+      .trim()
       // 1. 見出し (## / ###)
       .replace(
         /^## (.*$)/gim,
@@ -28,7 +32,7 @@ export function parseMyText(text) {
       // ★★★ 4. 【魔法の記述】[js:ファイル名] を 自動でdivとscriptタグに変換！ ★★★
       .replace(
         /\[js:(.*?)\]/g,
-        '<div id="game-container" class="my-8 p-6 bg-[#f4f7f5] rounded-xl text-center border border-[#2d6a4f]/20"></div><script type="module" src="./js/games/$1.js"></script>'
+        '<div id="game-container" class="my-8 p-6 bg-[#f4f7f5] rounded-xl text-center border border-[#2d6a4f]/20"></div><script type="module" src="./js/games/$1.js"></script>',
       )
 
       // 5. 画像タグの自動変換
