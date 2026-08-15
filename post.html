@@ -31,26 +31,28 @@
   >
     <div id="site-header"></div>
 
-    <main class="flex-1 pt-16">
+<main class="flex-1 pt-16">
       <div class="max-w-[760px] mx-auto px-6 py-12">
         <article>
           <p id="post-date" class="text-xs text-[#2d6a4f] font-mono mb-2"></p>
+          
+          <!-- タイトルの下マージンを mb-5（ちょうどいい隙間）にしたよ！ -->
           <h1
             id="post-title"
-            class="font-display text-3xl sm:text-4xl text-[#1b4332] mb-8 font-normal"
+            class="font-display text-3xl sm:text-4xl text-[#1b4332] mb-6 font-normal"
           >
             loading...
           </h1>
 
-          <div class="h-px bg-[#2d6a4f]/12 w-full mb-8"></div>
+          <!-- ★ ここにあったラインの <div> は綺麗サッパリ消したにゃ！ ★ -->
 
-          <!-- 本文エリア（自作パーサーで生成） -->
+          <!-- 本文エリア -->
           <div
             id="post-body"
             class="text-[#555] leading-relaxed space-y-4 text-[0.95rem]"
           ></div>
 
-          <!-- 本文下の「戻るボタン」（ホバーで左にふわっと動く演出付き） -->
+          <!-- 本文下の「戻るボタン」 -->
           <a
             href="./devLog.html"
             class="inline-block mt-14 text-[0.88rem] text-[#2d6a4f] hover:text-[#1b4332] transition-all duration-200 hover:-translate-x-1"

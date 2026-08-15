@@ -38,7 +38,7 @@ export function parseMyText(text) {
       // 5. 画像タグの自動変換
       .replace(
         /!\[(.*?)\]\((.*?)\)/g,
-        '<img src="$2" alt="$1" class="w-full max-w-[600px] max-h-[350px] object-contain rounded-lg my-4 shadow-sm" loading="lazy">',
+        '<img src="$2" alt="$1" class="w-auto h-auto max-w-[600px] max-h-[600px] rounded-xl my-4 shadow-sm" loading="lazy">',
       )
 
       // 6. 改行を <br> に変換
