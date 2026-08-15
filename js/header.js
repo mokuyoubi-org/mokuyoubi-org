@@ -16,7 +16,7 @@ export function renderHeaderAndFooter() {
           <a href="./index.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Home</a>
           <a href="./terms.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Terms</a>
           <a href="./privacy.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Privacy</a>
-          <a href="./tokusho.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">SCT Act</a>
+          <a href="./sctAct.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">SCT Act</a>
           <a href="./devLog.html" class="px-3 sm:px-4 py-1.5 rounded-full hover:text-[#2d6a4f] hover:bg-[#f0faf2] transition-all">Dev Log</a>
         </div>
       </nav>
