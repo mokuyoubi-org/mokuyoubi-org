@@ -35,10 +35,24 @@ export function parseMyText(text) {
         '<div id="game-container" class="my-8 p-6 bg-[#f4f7f5] rounded-xl text-center border border-[#2d6a4f]/20"></div><script type="module" src="./js/games/$1.js"></script>',
       )
 
-      // 5. 画像タグの自動変換
+      // 5. 画像タグの自動変換 (例: ![説明](画像のURL))
+      // 💡画像URLが後のURL自動変換で崩れないように、画像変換を先にやっておくのがコツだにゃ！
       .replace(
         /!\[(.*?)\]\((.*?)\)/g,
         '<img src="$2" alt="$1" class="w-auto h-auto max-w-[600px] max-h-[600px] rounded-xl my-4 shadow-sm" loading="lazy">',
+      )
+
+      // ★★★ 7. マークダウン風リンク [文字](URL) と 通常の URL の自動リンク化 ★★★
+      // ① [タイトル](URL) の形式をリンクにする
+      .replace(
+        /\[(.*?)\]\((https?:\/\/[^\s<]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#2d6a4f] underline hover:opacity-80">$1</a>',
+      )
+      // ② 「http://〜」や「https://〜」で始まる直接書かれた文字をそのままクリックできるリンクにする
+      // (※すでにaタグのhrefの中に入っているURLは書き換えない工夫をしてるにゃ！)
+      .replace(
+        /(?<!href="|src=")(https?:\/\/[^\s<]+)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-[#2d6a4f] underline hover:opacity-80">$1</a>',
       )
 
       // 6. 改行を <br> に変換
