@@ -25,7 +25,7 @@ window.currentPost = {
     zIndex: 50, // 手前に表示させたいコンポーネントより低く
     elevation: 50, // ❌これが余計なプロパティ
   },
-  ![image](images/screenshot20260804.png)
+  ![image](images/20260804.png)
   elevation: 50
   としてしまうと、画像のような、謎の枠が出現してしまう。
   `,
