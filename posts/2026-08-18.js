@@ -15,7 +15,7 @@ window.currentPost = {
               ? undefined
               : (props) => {
                   const { ref, ...restProps } = props as any;
-                  return <Pressable {...restProps} android_ripple={null} />;
+                  return ＜Pressable {...restProps} android_ripple={null} /＞;
                 },
 （以下略）
 
@@ -30,9 +30,9 @@ window.currentPost = {
 
 🌟deprecatedな書き方。
 // 修正前
-<View pointerEvents="box-none">
+＜View pointerEvents="box-none"＞
 // 修正後
-<View style={{ pointerEvents: "box-none" }}>
+＜View style={{ pointerEvents: "box-none" }}＞
 
 // 修正前
 noShadow: { shadowOpacity: 0,},
