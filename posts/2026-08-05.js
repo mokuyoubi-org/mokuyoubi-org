@@ -8,5 +8,7 @@ window.currentPost = {
   要素の高さがheightだとしたら、
   PixelRatio.roundToNearestPixel(height)
   で解決。詳しくはGeminiに。
+
+  2026/09/01追記：Androidではやっぱりよく見るとうまく行ってない。...
   `,
 };
