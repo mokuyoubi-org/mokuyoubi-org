@@ -18,7 +18,7 @@ inspectを押す。
 ![image](images/DevTools.png)
 
 4. すると...!
-![image](images/PastedGraphic.png.png)
+![image](images/PastedGraphic.png)
 
 SUGEEE!!
 ポケモンダイヤモンド・パールで、謎の場所で規定の歩数歩いて地上に戻ったら、シェイミがいた時と同じくらい、ワクワクした。

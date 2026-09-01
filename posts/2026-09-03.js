@@ -16,7 +16,7 @@ Enable Captcha protectionというのがあるのでそのトグルをオンに�
 Choose Captcha Providerはturnstileを選択、Captcha secretはさっきメモしたsecretをセットして、保存する。
 
 
-④
-
+④TurnstileWidgetをnative/web両方用作って、認証系、ログイン系のコードに埋め込む
+詳しくはclaudeくんに聞いてください
   `,
 };
