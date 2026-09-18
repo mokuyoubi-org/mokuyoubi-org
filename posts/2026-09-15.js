@@ -1,0 +1,6 @@
+window.currentPost = {
+  title: "",
+  content: `
+
+  `,
+};

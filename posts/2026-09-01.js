@@ -1,5 +1,5 @@
 window.currentPost = {
-  title: "AndroidのChromeでもconsoleが見たい！",
+  title: "AndroidのChromeでもconsoleが見たい",
   content: `
 1. USBでスマホとパソコンを繋ぐ
 もちろん、AndroidはDeveloper modeで、USBデバッグもオンにしておく。
