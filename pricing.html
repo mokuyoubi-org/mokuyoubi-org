@@ -1,0 +1,195 @@
+<!-- pricing.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - MOKUYOUBI</title>
+    <meta
+      name="description"
+      content="Hoshigo pricing: a free plan and a Premium subscription (JPY 240 per month or JPY 1,200 per year)."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN & テーマ設定 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Noto Sans JP", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-sans text-[#1a1a1a] bg-white min-h-screen flex flex-col antialiased"
+  >
+    <!-- 共通ヘッダー -->
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <article>
+        <!-- Hero Header -->
+        <header class="bg-[#f0faf2] py-16 border-b border-[#2d6a4f]/10">
+          <div class="max-w-[760px] mx-auto px-6">
+            <p
+              class="text-[0.78rem] tracking-[0.18em] text-[#2d6a4f] uppercase font-medium mb-3"
+            >
+              Pricing
+            </p>
+            <h1
+              class="font-display font-light text-4xl sm:text-5xl md:text-6xl text-[#1b4332] leading-tight mb-4"
+            >
+              Hoshigo Pricing
+            </h1>
+            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
+              Hoshigo is a Go (baduk) app for mobile and web. It is free to
+              play. Upgrade to Premium to save an unlimited number of game
+              records.
+            </p>
+          </div>
+        </header>
+
+        <div class="max-w-[760px] mx-auto px-6 pt-12 pb-20">
+          <!-- プランカード -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <!-- Free -->
+            <section
+              class="rounded-2xl border border-[#2d6a4f]/15 p-6 flex flex-col"
+            >
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332]">Free</h2>
+              <p class="mt-3">
+                <span class="font-display text-4xl text-[#1b4332]">¥0</span>
+              </p>
+              <ul
+                class="mt-4 space-y-2 text-[0.92rem] text-[#555] leading-[1.7]"
+              >
+                <li>✓ Play Go on mobile and web</li>
+                <li>✓ Save up to 50 game records per board size</li>
+              </ul>
+            </section>
+
+            <!-- Premium Monthly -->
+            <section
+              class="rounded-2xl border border-[#2d6a4f]/15 p-6 flex flex-col"
+            >
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332]">
+                Premium Monthly
+              </h2>
+              <p class="mt-3">
+                <span class="font-display text-4xl text-[#1b4332]">¥240</span>
+                <span class="text-[0.85rem] text-[#888]"> / month</span>
+              </p>
+              <ul
+                class="mt-4 space-y-2 text-[0.92rem] text-[#555] leading-[1.7]"
+              >
+                <li>✓ Everything in Free</li>
+                <li>✓ Unlimited game record saving</li>
+              </ul>
+            </section>
+
+            <!-- Premium Yearly -->
+            <section
+              class="rounded-2xl border border-[#2d6a4f] bg-[#f0faf2] p-6 flex flex-col"
+            >
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332]">
+                Premium Yearly
+              </h2>
+              <p class="mt-3">
+                <span class="font-display text-4xl text-[#1b4332]">¥1,200</span>
+                <span class="text-[0.85rem] text-[#888]"> / year</span>
+              </p>
+              <p class="mt-1 text-[0.82rem] text-[#2d6a4f]">
+                About ¥100 per month
+              </p>
+              <ul
+                class="mt-4 space-y-2 text-[0.92rem] text-[#555] leading-[1.7]"
+              >
+                <li>✓ Everything in Free</li>
+                <li>✓ Unlimited game record saving</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- 補足事項 -->
+          <div class="mt-12">
+            <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
+                Billing
+              </h2>
+              <p class="text-[0.92rem] text-[#555] leading-[1.9]">
+                Premium is a subscription. It renews automatically at the end
+                of each billing period (monthly or yearly) until you cancel.
+                You can cancel at any time.
+              </p>
+            </section>
+
+            <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
+                Payments and taxes
+              </h2>
+              <p class="text-[0.92rem] text-[#555] leading-[1.9]">
+                Prices are shown in Japanese yen (JPY). Purchases made on the
+                web are processed by Paddle, our Merchant of Record. Applicable
+                taxes are calculated and shown at checkout. Purchases made
+                through the App Store or Google Play are processed by each
+                store.
+              </p>
+            </section>
+
+            <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
+                Refunds
+              </h2>
+              <p class="text-[0.92rem] text-[#555] leading-[1.9]">
+                You can request a refund within 14 days of purchase. See our
+                <a
+                  href="./refund.html"
+                  class="text-[#2d6a4f] underline underline-offset-2"
+                  >Refund Policy</a
+                >
+                for details.
+              </p>
+            </section>
+
+            <section class="py-8">
+              <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
+                Seller and contact
+              </h2>
+              <p class="text-[0.92rem] text-[#555] leading-[1.9]">
+                Hoshigo is provided by the Mokuyoubi Team (Harutaka Shimizu).
+                Questions? Email
+                <a
+                  href="mailto:support@mokuyoubi.org"
+                  class="text-[#2d6a4f] underline underline-offset-2"
+                  >support@mokuyoubi.org</a
+                >.
+              </p>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- 共通フッター -->
+    <div id="site-footer"></div>
+
+    <script type="module">
+      import { renderHeaderAndFooter } from "./js/header.js";
+
+      renderHeaderAndFooter();
+    </script>
+  </body>
+</html>
