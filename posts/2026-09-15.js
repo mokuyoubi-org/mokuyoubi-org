@@ -1,6 +1,0 @@
-window.currentPost = {
-  title: "",
-  content: `
-
-  `,
-};

@@ -4,166 +4,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Refund Policy - MOKUYOUBI</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Tailwind CDN & テーマ設定 -->
+    <title>MOKUYOUBI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ["Cormorant Garamond", "serif"],
-              sans: ["Noto Sans JP", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <script src="./js/tailwind-config.js"></script>
   </head>
   <body
-    class="font-sans text-[#1a1a1a] bg-white min-h-screen flex flex-col antialiased"
+    class="font-sans text-text bg-foreground min-h-screen flex flex-col antialiased"
   >
-    <!-- 共通ヘッダー -->
     <div id="site-header"></div>
 
     <main class="flex-1 pt-16">
-      <article>
-        <!-- Hero Header -->
-        <header class="bg-[#f0faf2] py-16 border-b border-[#2d6a4f]/10">
-          <div class="max-w-[760px] mx-auto px-6">
-            <p
-              class="text-[0.78rem] tracking-[0.18em] text-[#2d6a4f] uppercase font-medium mb-3"
-            >
-              Refund Policy
-            </p>
-            <h1
-              class="font-display font-light text-4xl sm:text-5xl md:text-6xl text-[#1b4332] leading-tight mb-4"
-            >
-              Refunds
-            </h1>
-            <p class="text-[0.82rem] text-[#888]">Last updated: October 2026</p>
-          </div>
-        </header>
-
-        <div class="max-w-[760px] mx-auto px-6 pt-12 pb-20">
-          <p
-            class="text-base text-[#555] leading-[1.9] pb-10 border-b border-[#2d6a4f]/10 mb-2"
-          >
-            This Refund Policy applies to purchases of Hoshigo Premium made on
-            the web, and forms part of our
-            <a
-              href="./terms.html"
-              class="text-[#2d6a4f] underline underline-offset-2"
-              >Terms of Service</a
-            >.
-          </p>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              1. Merchant of Record
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              Paddle.com Market Limited ("Paddle") is the Merchant of Record and
-              authorised reseller for web purchases of Hoshigo Premium. Refunds
-              are processed by Paddle, not by the Mokuyoubi Team.
-            </p>
-          </section>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              2. Refund period
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              You can request a refund within 14 days of the purchase date, for
-              any reason. This applies to both monthly and yearly subscriptions,
-              including renewal charges.
-            </p>
-          </section>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              3. How to request a refund
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              Please request your refund from Paddle at
-              <a
-                href="https://paddle.net"
-                class="text-[#2d6a4f] underline underline-offset-2"
-                >paddle.net</a
-              >. You can find your order using the email address you used at
-              checkout and the receipt Paddle sent you. If you have any trouble,
-              email us at
-              <a
-                href="mailto:support@mokuyoubi.org"
-                class="text-[#2d6a4f] underline underline-offset-2"
-                >support@mokuyoubi.org</a
-              >
-              and we will help.
-            </p>
-          </section>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              4. Processing time
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              Once a refund is approved, it may take several business days to
-              appear, depending on your payment method and bank. When a refund
-              is issued, Premium access for that purchase ends.
-            </p>
-          </section>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              5. Cancelling your subscription
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              You can cancel at any time. Cancelling stops future renewals. To
-              get a refund for a charge, please request it within the 14-day
-              period above.
-            </p>
-          </section>
-
-          <section class="py-8 border-b border-[#2d6a4f]/[0.07]">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              6. App Store and Google Play purchases
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              Purchases made through the App Store or Google Play are subject to
-              each store's refund policy, and refunds must be requested from the
-              respective store.
-            </p>
-          </section>
-
-          <section class="py-8">
-            <h2 class="text-[1.05rem] font-semibold text-[#1b4332] mb-3">
-              7. Your statutory rights
-            </h2>
-            <p class="text-[0.92rem] text-[#555] leading-[1.9]">
-              Nothing in this policy limits any rights you have under applicable
-              consumer protection laws.
-            </p>
-          </section>
+      <header class="bg-background py-16 border-b border-primary/10">
+        <div class="max-w-3xl mx-auto px-6">
+          <h1
+            data-i18n="refunds.h1"
+            class="font-light text-4xl sm:text-5xl md:text-6xl text-text leading-tight mb-4"
+          ></h1>
+          <p data-i18n="common.updated" class="text-xs text-slate-400"></p>
         </div>
-      </article>
+      </header>
+
+      <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+        <p
+          data-i18n="refunds.intro"
+          class="text-base text-textSub leading-relaxed pb-10 border-b border-primary/10 mb-2"
+        ></p>
+        <div data-i18n="refunds.sections"></div>
+      </div>
     </main>
 
-    <!-- 共通フッター -->
     <div id="site-footer"></div>
-
-    <script type="module">
-      import { renderHeaderAndFooter } from "./js/header.js";
-
-      renderHeaderAndFooter();
-    </script>
+    <script type="module" src="./js/site.js"></script>
   </body>
 </html>
