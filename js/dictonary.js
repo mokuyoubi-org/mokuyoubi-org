@@ -70,8 +70,6 @@ export const dictionary = {
 
   pricing: {
     en: {
-      intro:
-        "{name} is free to play. Upgrade to Premium to save unlimited game records.",
       free: "Free",
       monthly: "Premium Monthly",
       yearly: "Premium Yearly",
@@ -99,8 +97,6 @@ export const dictionary = {
       ],
     },
     ja: {
-      intro:
-        "{name}は無料で遊べます。Premiumにすると、棋譜を無制限に保存できます。",
       free: "無料",
       monthly: "Premium 月額",
       yearly: "Premium 年額",
@@ -128,7 +124,6 @@ export const dictionary = {
       ],
     },
     zh: {
-      intro: "{name}可免费游玩。升级 Premium 即可无限保存棋谱。",
       free: "免费",
       monthly: "Premium 月付",
       yearly: "Premium 年付",
@@ -156,8 +151,6 @@ export const dictionary = {
       ],
     },
     ko: {
-      intro:
-        "{name}은 무료로 즐길 수 있습니다. Premium으로 업그레이드하면 기보를 무제한으로 저장할 수 있습니다.",
       free: "무료",
       monthly: "Premium 월간",
       yearly: "Premium 연간",
