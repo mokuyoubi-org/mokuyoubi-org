@@ -1,0 +1,51 @@
+<!-- contact.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOKUYOUBI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+  </head>
+  <body
+    class="font-sans text-text bg-foreground min-h-screen flex flex-col antialiased"
+  >
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <header class="bg-background py-16 border-b border-primary/10">
+        <div class="max-w-3xl mx-auto px-6">
+          <h1
+            data-i18n="contact.h1"
+            class="font-light text-4xl sm:text-5xl md:text-6xl text-text leading-tight mb-4"
+          ></h1>
+        </div>
+      </header>
+
+      <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+        <p
+          data-i18n="contact.intro"
+          class="text-base text-textSub leading-relaxed mb-6"
+        ></p>
+        <a
+          id="contact-mail"
+          href="#"
+          class="text-lg text-primary underline break-all"
+        ></a>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="./js/site.js"></script>
+    <script>
+      // ボットからの迷惑メール対策で、動的に組み合わせている
+      const user = "support"; // ここに@より前
+      const domain = "mokuyoubi.org"; // ここに@より後
+      const mail = user + "@" + domain;
+      const link = document.getElementById("contact-mail");
+      link.href = "mailto:" + mail;
+      link.textContent = mail;
+    </script>
+  </body>
+</html>

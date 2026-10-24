@@ -29,6 +29,7 @@ export const dictionary = {
       terms: "Terms",
       privacy: "Privacy",
       refunds: "Refunds",
+      contact: "Contact",
       updated: "Last updated: October 2026",
     },
     ja: {
@@ -36,6 +37,7 @@ export const dictionary = {
       terms: "利用規約",
       privacy: "プライバシー",
       refunds: "返金",
+      contact: "お問い合わせ",
       updated: "最終更新: 2026年10月",
     },
     zh: {
@@ -43,6 +45,7 @@ export const dictionary = {
       terms: "条款",
       privacy: "隐私",
       refunds: "退款",
+      contact: "联系我们",
       updated: "最后更新:2026年10月",
     },
     ko: {
@@ -50,6 +53,7 @@ export const dictionary = {
       terms: "이용약관",
       privacy: "개인정보",
       refunds: "환불",
+      contact: "문의하기",
       updated: "최종 업데이트: 2026년 10월",
     },
   },
@@ -365,6 +369,27 @@ export const dictionary = {
           `약관에 관한 문의는 ${mail}로 보내 주시거나, GitHub Issues 또는 각 앱 스토어의 지원 페이지를 이용해 주세요.`,
         ],
       ],
+    },
+  },
+
+    contact: {
+    en: {
+      h1: "Contact",
+      intro:
+        "For questions or feedback about StarGo, please email us at the address below.",
+    },
+    ja: {
+      h1: "お問い合わせ",
+      intro:
+        "星碁に関するご質問・ご意見は、下記のメールアドレスまでご連絡ください。",
+    },
+    zh: {
+      h1: "联系我们",
+      intro: "如对星围棋有任何疑问或意见,请通过以下邮箱联系我们。",
+    },
+    ko: {
+      h1: "문의하기",
+      intro: "별바둑에 대한 문의나 의견은 아래 이메일로 보내 주세요.",
     },
   },
 
