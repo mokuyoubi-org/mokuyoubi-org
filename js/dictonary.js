@@ -54,6 +54,13 @@ export const dictionary = {
     },
   },
 
+    webButton: {
+    en: { sub: "Open in", main: "Web Browser" },
+    ja: { sub: "ブラウザで", main: "Web版を開く" },
+    zh: { sub: "在浏览器中", main: "打开网页版" },
+    ko: { sub: "브라우저에서", main: "웹 버전 열기" },
+  },
+
   home: {
     en: {
       tagline:

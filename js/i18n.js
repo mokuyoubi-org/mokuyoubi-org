@@ -55,6 +55,10 @@ export const applyLang = (lang) => {
     el.innerHTML = html.replaceAll("{name}", name);
   });
 
+  // スマホ画像を言語に合わせる
+  const heroPhone = document.getElementById("hero-phone");
+  if (heroPhone) heroPhone.src = `./images/smartphone-${lang}.png`;
+
   // タイトルをシンプルに「MOKUYOUBI」で固定するにゃ！
   document.title = "MOKUYOUBI";
 
