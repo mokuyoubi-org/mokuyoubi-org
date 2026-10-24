@@ -30,6 +30,7 @@ export const dictionary = {
       privacy: "Privacy",
       refunds: "Refunds",
       contact: "Contact",
+      licenses: "Licenses",
       updated: "Last updated: October 2026",
     },
     ja: {
@@ -38,6 +39,7 @@ export const dictionary = {
       privacy: "プライバシー",
       refunds: "返金",
       contact: "お問い合わせ",
+      licenses: "ライセンス",
       updated: "最終更新: 2026年10月",
     },
     zh: {
@@ -46,6 +48,7 @@ export const dictionary = {
       privacy: "隐私",
       refunds: "退款",
       contact: "联系我们",
+      licenses: "许可证",
       updated: "最后更新:2026年10月",
     },
     ko: {
@@ -54,6 +57,7 @@ export const dictionary = {
       privacy: "개인정보",
       refunds: "환불",
       contact: "문의하기",
+      licenses: "라이선스",
       updated: "최종 업데이트: 2026년 10월",
     },
   },
@@ -392,6 +396,49 @@ export const dictionary = {
       intro: "별바둑에 대한 문의나 의견은 아래 이메일로 보내 주세요.",
     },
   },
+
+licenses: {
+  en: {
+    h1: "Acknowledgements & Third Party Licenses",
+    ackTitle: "Acknowledgements",
+    ackIntro:
+      "We would like to express our deepest gratitude to the creators and contributors of the following open-source projects. Their incredible work and dedication have made this project possible.",
+    licensesTitle: "Third Party Licenses",
+    showLicense: "Show License Text",
+    hideLicense: "Hide License Text",
+    sourceLink: "Source Code / License",
+  },
+  ja: {
+    h1: "謝辞とサードパーティライセンス",
+    ackTitle: "謝辞",
+    ackIntro:
+      "次のオープンソースプロジェクトの作者と貢献者のみなさまに、心から感謝いたします。みなさまの素晴らしい仕事と熱意のおかげで、このプロジェクトが実現しました。",
+    licensesTitle: "サードパーティライセンス",
+    showLicense: "ライセンス本文を表示",
+    hideLicense: "ライセンス本文を閉じる",
+    sourceLink: "ソースコード / ライセンス",
+  },
+  zh: {
+    h1: "致谢与第三方许可",
+    ackTitle: "致谢",
+    ackIntro:
+      "衷心感谢以下开源项目的作者和贡献者。他们出色的工作和奉献,使本项目得以实现。",
+    licensesTitle: "第三方许可",
+    showLicense: "显示许可文本",
+    hideLicense: "隐藏许可文本",
+    sourceLink: "源代码 / 许可",
+  },
+  ko: {
+    h1: "감사의 말과 서드파티 라이선스",
+    ackTitle: "감사의 말",
+    ackIntro:
+      "다음 오픈소스 프로젝트의 제작자와 기여자 여러분께 깊은 감사를 드립니다. 여러분의 훌륭한 작업과 헌신 덕분에 이 프로젝트가 가능했습니다.",
+    licensesTitle: "서드파티 라이선스",
+    showLicense: "라이선스 전문 보기",
+    hideLicense: "라이선스 전문 닫기",
+    sourceLink: "소스 코드 / 라이선스",
+  },
+},
 
   privacy: {
     en: {

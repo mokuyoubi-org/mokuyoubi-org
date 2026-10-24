@@ -1,0 +1,228 @@
+<!-- licenses.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOKUYOUBI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+  </head>
+  <body
+    class="font-sans text-text bg-foreground min-h-screen flex flex-col antialiased"
+  >
+    <div id="site-header"></div>
+
+    <main class="flex-1 pt-16">
+      <!-- ヘッダーエリア -->
+      <header class="bg-background py-16 border-b border-primary/10">
+        <div class="max-w-3xl mx-auto px-6">
+          <h1
+            data-i18n="licenses.h1"
+            class="font-light text-4xl sm:text-5xl md:text-6xl text-text leading-tight mb-4"
+          ></h1>
+        </div>
+      </header>
+
+      <!-- メインコンテンツ -->
+      <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+        <!-- 謝辞カード -->
+        <section
+          class="mb-12 bg-background rounded-2xl p-6 sm:p-8 border border-primary/15 shadow-sm"
+        >
+          <h2
+            data-i18n="licenses.ackTitle"
+            class="text-2xl font-medium text-text mb-3"
+          ></h2>
+          <p
+            data-i18n="licenses.ackIntro"
+            class="text-base text-textSub leading-relaxed mb-4"
+          ></p>
+          <ul
+            class="list-disc pl-6 text-base text-textSub leading-relaxed space-y-1"
+          >
+            <li>KataGo Neural Network Model Weights (by David J Wu)</li>
+            <li>lightvector/goscorer (by David J Wu)</li>
+            <li>Sir-Teo/web-katrain (by Web KatRain Contributors)</li>
+          </ul>
+        </section>
+
+        <!-- サードパーティライセンス一覧 -->
+        <h2
+          data-i18n="licenses.licensesTitle"
+          class="text-2xl font-medium text-text mb-6"
+        ></h2>
+
+        <div class="space-y-6">
+          <!-- ライセンス 1 -->
+          <div
+            class="bg-background rounded-2xl p-6 border border-primary/15 shadow-sm"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-primary/10"
+            >
+              <h3 class="text-xl font-medium text-text">
+                KataGo Neural Network Model Weights
+              </h3>
+              <a
+                href="https://katagotraining.org/network_license/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1 shrink-0"
+              >
+                <span data-i18n="licenses.sourceLink"></span>
+                <span>↗</span>
+              </a>
+            </div>
+            <details class="group">
+              <summary
+                class="cursor-pointer text-sm text-primary font-medium hover:opacity-80 transition-opacity select-none list-none flex items-center gap-1"
+              >
+                <span
+                  class="group-open:hidden"
+                  data-i18n="licenses.showLicense"
+                ></span>
+                <span
+                  class="hidden group-open:inline"
+                  data-i18n="licenses.hideLicense"
+                ></span>
+              </summary>
+              <pre
+                class="mt-4 p-4 bg-foreground rounded-xl text-xs text-textSub leading-relaxed whitespace-pre-wrap break-words max-h-60 overflow-y-auto border border-primary/10 font-mono"
+              >
+Copyright 2026 David J Wu ("lightvector").
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the neural net files or training weight files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+              </pre>
+            </details>
+          </div>
+
+          <!-- ライセンス 2 -->
+          <div
+            class="bg-background rounded-2xl p-6 border border-primary/15 shadow-sm"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-primary/10"
+            >
+              <h3 class="text-xl font-medium text-text">
+                lightvector/goscorer
+              </h3>
+              <a
+                href="https://github.com/lightvector/goscorer/blob/main/LICENSE.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1 shrink-0"
+              >
+                <span data-i18n="licenses.sourceLink"></span>
+                <span>↗</span>
+              </a>
+            </div>
+            <details class="group">
+              <summary
+                class="cursor-pointer text-sm text-primary font-medium hover:opacity-80 transition-opacity select-none list-none flex items-center gap-1"
+              >
+                <span
+                  class="group-open:hidden"
+                  data-i18n="licenses.showLicense"
+                ></span>
+                <span
+                  class="hidden group-open:inline"
+                  data-i18n="licenses.hideLicense"
+                ></span>
+              </summary>
+              <pre
+                class="mt-4 p-4 bg-foreground rounded-xl text-xs text-textSub leading-relaxed whitespace-pre-wrap break-words max-h-60 overflow-y-auto border border-primary/10 font-mono"
+              >
+Copyright 2024 David J Wu ("lightvector").
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+              </pre>
+            </details>
+          </div>
+
+          <!-- ライセンス 3 -->
+          <div
+            class="bg-background rounded-2xl p-6 border border-primary/15 shadow-sm"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-primary/10"
+            >
+              <h3 class="text-xl font-medium text-text">Sir-Teo/web-katrain</h3>
+              <a
+                href="https://github.com/Sir-Teo/web-katrain/blob/main/LICENSE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1 shrink-0"
+              >
+                <span data-i18n="licenses.sourceLink"></span>
+                <span>↗</span>
+              </a>
+            </div>
+            <details class="group">
+              <summary
+                class="cursor-pointer text-sm text-primary font-medium hover:opacity-80 transition-opacity select-none list-none flex items-center gap-1"
+              >
+                <span
+                  class="group-open:hidden"
+                  data-i18n="licenses.showLicense"
+                ></span>
+                <span
+                  class="hidden group-open:inline"
+                  data-i18n="licenses.hideLicense"
+                ></span>
+              </summary>
+              <pre
+                class="mt-4 p-4 bg-foreground rounded-xl text-xs text-textSub leading-relaxed whitespace-pre-wrap break-words max-h-60 overflow-y-auto border border-primary/10 font-mono"
+              >
+MIT License
+
+Copyright (c) 2026 Web KatRain Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+              </pre>
+            </details>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="./js/site.js"></script>
+  </body>
+</html>
