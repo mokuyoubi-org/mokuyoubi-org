@@ -82,7 +82,7 @@ export const dictionary = {
       yearly: "Premium Yearly",
       perMonth: " / month",
       perYear: " / year",
-      free1: "✓ Save up to 50 game records per board size",
+      free1: "✓ Save up to 30 game records per board size",
       premium1: "✓ Unlimited game record saving",
       notes: [
         [
@@ -109,7 +109,7 @@ export const dictionary = {
       yearly: "Premium 年額",
       perMonth: " / 月",
       perYear: " / 年",
-      free1: "✓ 棋譜を盤サイズごとに50件まで保存",
+      free1: "✓ 棋譜を盤サイズごとに30件まで保存",
       premium1: "✓ 棋譜を無制限に保存",
       notes: [
         [
@@ -136,7 +136,7 @@ export const dictionary = {
       yearly: "Premium 年付",
       perMonth: " / 月",
       perYear: " / 年",
-      free1: "✓ 每种棋盘尺寸最多保存 50 份棋谱",
+      free1: "✓ 每种棋盘尺寸最多保存 30 份棋谱",
       premium1: "✓ 无限保存棋谱",
       notes: [
         [
@@ -163,7 +163,7 @@ export const dictionary = {
       yearly: "Premium 연간",
       perMonth: " / 월",
       perYear: " / 년",
-      free1: "✓ 바둑판 크기별로 기보 최대 50개 저장",
+      free1: "✓ 바둑판 크기별로 기보 최대 30개 저장",
       premium1: "✓ 기보 무제한 저장",
       notes: [
         [
